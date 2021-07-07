@@ -25,7 +25,7 @@ st.markdown('<style>' + open('style.css').read() +
 st.markdown('<body class="title">Streamlit : build and share data apps</body>',
             unsafe_allow_html=True)
 
-st.sidebar.title("Bonjour :racing_car: :car:")
+st.sidebar.title("Bonjour :racing_car: :car: :blue_car:")
 
 choice = st.sidebar.selectbox("", ('Analyse descriptive', "Analyse des corrélations"))
 
