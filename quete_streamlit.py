@@ -131,7 +131,8 @@ if choice == 'Analyse des corrélations':
     sns.heatmap(df_cars.corr(), annot=True, cmap="YlGnBu")
     sns.set(rc={'figure.facecolor': 'white'})
     st.write(fig)
-    st.write("A la lecture de ce heatmap, 4 variables sont fortement corrélées (hp, weightlbs, cylinders, cubicinches). Nous allons nous intéresser à d'autres corrélations ici.")
+    st.markdown("<body class='p4'>A la lecture de ce heatmap, 4 variables sont fortement corrélées (hp, weightlbs, cylinders, cubicinches). Nous allons nous intéresser à d'autres corrélations ici.</body>",
+                    unsafe_allow_html=True)
     st.title('')
 
     st.markdown("<body class='p3'>Quelques analyses de corrélation :</body>",
@@ -152,7 +153,8 @@ if choice == 'Analyse des corrélations':
     fig7.update_xaxes(title_text="<b>Temps (sec)")
     fig7.update_yaxes(title_text="<b>Puissance")
     st.write(fig7)
-    st.write('Plus le modèle est puissant, plus la durée pour atteindre les 60 miles est faible')
+    st.markdown("<body class='p4'>Plus le modèle est puissant, plus la durée pour atteindre les 60 miles est faible.</body>",
+                    unsafe_allow_html=True)
 
     st.title('')
     fig8 = px.scatter(df_cars, x="year",
@@ -170,6 +172,7 @@ if choice == 'Analyse des corrélations':
     fig8.update_xaxes(title_text="<b>Années")
     fig8.update_yaxes(title_text="<b>Distance par gallon")
     st.write(fig8)
-    st.write("La distance parcourue par gallon ne cesse d'augmenter au fil du temps soit une baisse de la consommation des véhicules")
+    st.markdown("<body class='p4'>La distance parcourue par gallon ne cesse d'augmenter au fil du temps soit une baisse de la consommation des véhicules.</body>",
+                    unsafe_allow_html=True)
     st.title('')
 
