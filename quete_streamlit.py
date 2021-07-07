@@ -36,7 +36,8 @@ liste_pays.insert(0, 'Tous')
 st.title('')
 st.title('')
 
-choix_pays = st.selectbox('Select a continent :', liste_pays)
+choix_pays = st.sidebar.radio('Select countries', liste_pays)
+#choix_pays = st.selectbox('Select a continent :', liste_pays)
 
 if choice == 'Analyse descriptive':
 
