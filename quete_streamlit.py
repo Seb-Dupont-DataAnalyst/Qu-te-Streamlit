@@ -27,7 +27,7 @@ st.markdown('<body class="title">Streamlit : build and share data apps</body>',
 
 st.sidebar.title("Bonjour :racing_car: :car: :blue_car:")
 
-choice = st.radio("", ('Analyse descriptive', "Analyse des corrélations"))
+choice = st.sidebar.radio("", ('Analyse descriptive', "Analyse des corrélations"))
 
 # Création Sidebar avec les différents choix
 liste_pays = df_cars['continent'].unique().tolist()
