@@ -8,7 +8,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
-st.beta_set_page_config(page_title='Ma super page Streamlit ! :car:', page_icon = favicon, initial_sidebar_state = 'auto')
+st.beta_set_page_config(page_title='Ma super page Streamlit ! :car:')
 
 link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv"
 df_cars = pd.read_csv(link)
