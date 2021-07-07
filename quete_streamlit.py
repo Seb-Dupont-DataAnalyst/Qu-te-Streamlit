@@ -27,19 +27,23 @@ choice = st.sidebar.radio("", ('Analyse descriptive', "Analyse des corrélations
 
 # Création Sidebar avec les différents choix
 liste_pays = df_cars['continent'].unique().tolist()
-liste_pays.insert(0, 'Tous')
+#liste_pays.insert(0, 'Tous')
 
 st.title('')
 st.title('')
 
-choix_pays = st.sidebar.radio('Select countries', liste_pays)
+choix_pays = st.sidebar.multiselect('Select countries', liste_pays, default= liste_pays, format_func=lambda x: 'Select a country' if x == '' else x)
 #choix_pays = st.selectbox('Select a continent :', liste_pays)
 
 if choice == 'Analyse descriptive':
 
-    if choix_pays != 'Tous':
+    if choix_pays :
+        
+        df_cars = df_cars[df_cars['continent'].isin(choix_pays)]
 
-        df_cars = df_cars[df_cars['continent'] == choix_pays]
+    else :
+        
+        st.sidebar.warning('No option is selected')
 
 
     st.subheader('')
@@ -115,9 +119,13 @@ if choice == 'Analyse descriptive':
 
 if choice == 'Analyse des corrélations':
 
-    if choix_pays != 'Tous':
+    if choix_pays :
+        
+        df_cars = df_cars[df_cars['continent'].isin(choix_pays)]
 
-        df_cars = df_cars[df_cars['continent'] == choix_pays]
+    else :
+        
+        st.sidebar.warning('No option is selected')
 
     st.subheader('')
     st.markdown('<body class="p3">Heatmap de corrélation :</body>',
