@@ -3,25 +3,10 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import plotly.express as px
-from functools import reduce
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.linear_model import LinearRegression, Lasso, LassoLarsCV
-from sklearn import linear_model
-from xgboost import XGBRegressor
-from sklearn import ensemble
-from sklearn import metrics
 import plotly.graph_objects as go
 import streamlit as st
-from PIL import Image
-import requests
 import streamlit.components.v1 as components
-from datetime import datetime, date, time
+
 
 
 link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv"
