@@ -27,7 +27,7 @@ st.markdown('<body class="title">Streamlit : build and share data apps</body>',
 
 st.sidebar.title("Bonjour :racing_car: :car: :blue_car:")
 
-choice = st.sidebar.selectbox("", ('Analyse descriptive', "Analyse des corrélations"))
+choice = st.radio("", ('Analyse descriptive', "Analyse des corrélations"))
 
 # Création Sidebar avec les différents choix
 liste_pays = df_cars['continent'].unique().tolist()
@@ -153,7 +153,7 @@ if choice == 'Analyse des corrélations':
     fig7.update_xaxes(title_text="<b>Temps (sec)")
     fig7.update_yaxes(title_text="<b>Puissance")
     st.write(fig7)
-    st.markdown("<body class='p4'>Plus le modèle est puissant, plus la durée pour atteindre les 60 miles est faible.</body>",
+    st.markdown("<body class='p4'>Plus le modèle est puissant, plus la durée pour atteindre les 60 miles/heure est faible.</body>",
                     unsafe_allow_html=True)
 
     st.title('')
