@@ -16,10 +16,6 @@ df_cars = pd.read_csv(link)
 df_cars['continent_fact'] = df_cars['continent'].factorize()[0]
 
 
-# st.set_page_config(layout='wide')
-
-# Titre principale
-#components.html("<body style='color:white;font-family:verdana; font-size:60px; border: 2px solid white; text-align: center; padding: 1px'><b>Cinéma Le Creusois</b></body>")
 st.markdown('<style>' + open('style.css').read() +
             '</style>', unsafe_allow_html=True)
 st.markdown('<body class="title">Streamlit : build and share data apps</body>',
@@ -36,7 +32,7 @@ liste_pays.insert(0, 'Tous')
 st.title('')
 st.title('')
 
-choix_pays = st.sidebar.radio('Select countries', liste_pays)
+choix_pays = st.sidebar.multiselect('Select countries', liste_pays)
 #choix_pays = st.selectbox('Select a continent :', liste_pays)
 
 if choice == 'Analyse descriptive':
